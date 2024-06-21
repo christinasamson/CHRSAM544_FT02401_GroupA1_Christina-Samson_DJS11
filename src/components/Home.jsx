@@ -84,7 +84,7 @@ const Home = () => {
       setFilteredPreviews(filtered);
     }
   };
-
+//This function updates the sorting criteria for displaying the podcasts.
   const handleSortChange = (criteria) => {
     setSortCriteria(criteria);
   };
