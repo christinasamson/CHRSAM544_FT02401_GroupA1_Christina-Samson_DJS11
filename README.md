@@ -2,7 +2,6 @@ Podcast App
 
 Netlify link: https://radiantvoices.netlify.app/login
 
-
  This project is a React-based web application that allows users to browse, search, filter, and manage their favorite podcasts. The app provides a user-friendly interface for podcast enthusiasts to discover and enjoy their favorite audio content.
 
 Features
