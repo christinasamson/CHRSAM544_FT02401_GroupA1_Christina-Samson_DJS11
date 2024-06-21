@@ -1,33 +1,61 @@
 .favorites-container {
-    padding: 20px;
-  }
-  
-  .favorites-list {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .favorite-item {
-    margin-bottom: 20px;
-  }
-  
-  .favorite-item h3 {
-    margin: 0 0 5px 0;
-  }
-  
-  .favorite-item p {
-    margin: 0 0 5px 0;
-  }
-  
-  button {
-    background-color: #dc3545;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 4px;
-  }
-  
-  button:hover {
-    background-color: #c82333;
-  }
+  padding: 20px;
+}
+
+.favorites-list {
+  list-style: none;
+  padding: 0;
+}
+
+.favorite-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.favorite-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 15px;
+}
+
+.favorite-details {
+  flex-grow: 1;
+}
+
+.favorite-details h3 {
+  margin: 0 0 5px 0;
+}
+
+.favorite-details p {
+  margin: 0 0 5px 0;
+}
+
+button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #c82333;
+}
+
+.view-show-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.view-show-link:hover {
+  text-decoration: underline;
+}

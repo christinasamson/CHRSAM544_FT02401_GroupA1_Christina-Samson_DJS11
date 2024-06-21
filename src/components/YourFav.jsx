@@ -1,31 +1,23 @@
-// src/components/Yourfav.jsx
-
-import React from 'react';
-import { Link } from 'react-router-dom';
 import { useFavorites } from '../contexts/FavouriteContext';
-import './Header.css';
+import { Link } from 'react-router-dom';
+import './YourFav.css';
 
-const Yourfav = () => {
+const YourFav = () => {
   const { favorites, removeFavorite } = useFavorites();
-
-  // Convert favorites object to an array of values
-  const favoriteEpisodes = Object.values(favorites);
-
-  // Check if there are no favorite episodes
-  if (favoriteEpisodes.length === 0) {
-    return <div>No favorite episodes yet!</div>;
-  }
 
   return (
     <div className="favorites-container">
-      <h1>Your Favorite Episodes</h1>
+      <h2>Your Favorite Episodes</h2>
       <ul className="favorites-list">
-        {favoriteEpisodes.map((episode) => (
-          <li key={episode.id} className="favorite-item">
-            <h3>{episode.title}</h3>
-            <p>Show: <Link to={`/show/${episode.showId}`}>{episode.showTitle}</Link></p>
-            <p>Season: {episode.seasonNumber}</p>
-            <button onClick={() => removeFavorite(episode.id)}>Remove from Favorites</button>
+        {Object.values(favorites).map((favorite) => (
+          <li key={favorite.id} className="favorite-item">
+            <h3>{favorite.title}</h3>
+            <p>Show: {favorite.showTitle}</p>
+            <p>Season: {favorite.seasonNumber}</p>
+            <button onClick={() => removeFavorite(favorite.id)}>Remove from Favorites</button>
+            <Link to={`/show/${favorite.showId}`} className="view-show-link">
+              View Show
+            </Link>
           </li>
         ))}
       </ul>
@@ -33,4 +25,4 @@ const Yourfav = () => {
   );
 };
 
-export default Yourfav;
+export default YourFav;

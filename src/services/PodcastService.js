@@ -42,6 +42,7 @@ export const fetchShow = async (showId) => {
       })),
     };
 
+    //Returns the structured showDetails object to the caller function that invoked fetchShow.
     return showDetails;
   } catch (error) {
     console.error(`Error fetching show with ID ${showId}:`, error);
